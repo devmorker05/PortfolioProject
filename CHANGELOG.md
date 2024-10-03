@@ -14,4 +14,17 @@ the following form: YYYY.0M.0D.
 - Designed a extendedLogic component
 - Designed a universalSort component
 - Designed a budgetTracker component
+
+## 2024.10.03
+
+### Added
+
+- Designed a proof of concept for universalSort component
+- Had a incomplete attempt at implementing hierarchies for universalSort
+component
+
+### Updated
+
+- Changed design to include the isSortedAlpha, isSortNums, and isReversed
+methods in order to add state to the design
 ```
