@@ -219,17 +219,17 @@ will likely refine your design to make your implementation easier to use.
     - `void reverse()`: reverses the order of the values in `this`.
     - `int search(T x)`: returns the index of `T x` in `this`.
     - `int indexSize(int i)`: returns the length of `this` the index at `i`.
+    - `boolean isSortedAlpha()`: returns `true` if `this` has been sorted
+    alphabetically already
+    - `boolean isSortedNum()`: returns `true` if `this` has been sorted
+    numerically already
+    - `boolean isReversed()`: returns `true` if `this` has been reversed already
   - **Secondary Methods**:
     - `void sortSize()`: sorts `this` by the size of the indices, smallest to
     largest.
     - `void sortCaseSensitive(boolean case)`: sorts `this` alphabetally, while
     accounting for case with lowercase values going first when `case` is true.
     - `void sortSubstring(String s)`: sorts `this` after the substring `s`
-    - `boolean isSortedAlpha()`: returns `true` if `this` has been sorted
-    alphabetically already
-    - `boolean isSortedNum()`: returns `true` if `this` has been sorted
-    numerically already
-    - `boolean isReversed()`: returns `true` if `this` has been reversed already
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
