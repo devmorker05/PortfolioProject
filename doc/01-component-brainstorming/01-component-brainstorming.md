@@ -210,9 +210,11 @@ will likely refine your design to make your implementation easier to use.
 - Component Design #2: universalSort
   - **Description**:
     - This component would make it possible to sort any storage-based osu
-    object straight-up, while offering multiple different ways to sort as well.
+    object straight-up, while offering multiple different ways to sort as well
+    and offering various states to track if the object has been sorted before,
+    alongside other toggles as well.
   - **Kernel Methods**:
-    - `void sort()`: sorts `this` alphabetally.
+    - `void sortAlpha()`: sorts `this` alphabetally.
     - `void sortNum()`: sorts `this` numerically.
     - `void reverse()`: reverses the order of the values in `this`.
     - `int search(T x)`: returns the index of `T x` in `this`.
@@ -222,7 +224,12 @@ will likely refine your design to make your implementation easier to use.
     largest.
     - `void sortCaseSensitive(boolean case)`: sorts `this` alphabetally, while
     accounting for case with lowercase values going first when `case` is true.
-    - `void sortSubstring(String s)`; sorts `this` after the substring `s`
+    - `void sortSubstring(String s)`: sorts `this` after the substring `s`
+    - `boolean isSortedAlpha()`: returns `true` if `this` has been sorted
+    alphabetically already
+    - `boolean isSortedNum()`: returns `true` if `this` has been sorted
+    numerically already
+    - `boolean isReversed()`: returns `true` if `this` has been reversed already
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
