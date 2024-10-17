@@ -121,7 +121,7 @@ hierarchy diagram using whatever tools you would like. Then, include a picture
 of it in this folder. You may also embed it just below using markdown syntax
 (i.e., `[ALT TEXT](path/to/file)`).
 
-[universalSort Hierarchy Diagram](/Users/devmorker/Applications/PortfolioProject/doc/universalSort Component Hierarchy.pdf)
+![universalSort Hierarchy Diagram](.doc/03-component-interfaces/universalSort Component Hierarchy-1.png)
 
 To start making your interfaces, make a branch off of main in your new repo
 called something like `interfaces`. There are many ways to do this, but my
