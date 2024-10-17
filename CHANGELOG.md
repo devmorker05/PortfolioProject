@@ -27,4 +27,14 @@ component
 
 - Changed design to include the isSortedAlpha, isSortNums, and isReversed
 methods in order to add state to the design
+
+## 2024.10.17
+
+### Added
+
+- Designed kernel and enhanced interfaces for universalSort component
+
+### Updated
+
+- Changed design to include method bodies for all kernel methods
 ```
