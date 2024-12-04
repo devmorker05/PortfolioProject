@@ -2,6 +2,7 @@ package components.universalSort;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Objects;
 
 /*
  * Layered implementations of secondary methods for {@code universalSort}
@@ -9,6 +10,45 @@ import java.util.Collections;
 public abstract class UniversalSortSecondary implements UniversalSort {
 
     public ArrayList<String> list;
+
+    // Standard Methods
+
+    @Override
+    public void clear() {
+        this.clear();
+    }
+
+    @Override
+    public UniversalSortSecondary newInstance() {
+    }
+
+    @Override
+    public void transferFrom(UniversalSort source) {
+        assert source instanceof UniversalSortSecondary : "Violation of: source is UniversalSortArrayList";
+        UniversalSortSecondary localSource = (UniversalSortSecondary) source;
+        this.list = localSource.list;
+        localSource.clear();
+    }
+
+    @Override
+    public String toString() {
+        return this.list.toString();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null || this.getClass() != obj.getClass())
+            return false;
+        UniversalSortSecondary that = (UniversalSortSecondary) obj;
+        return Objects.equals(this.list, that.list);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(this.list);
+    }
 
     /*
      * Common methods (from universalSortKernel)-------------------------------
