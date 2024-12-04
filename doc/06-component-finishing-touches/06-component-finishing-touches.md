@@ -1,8 +1,8 @@
 # Portfolio Part 6: Finishing Touches
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) and delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) and delete this comment -->
-- **Due Date**: <!-- TODO: fill out with due date and time (e.g., 10/17 @ 3:10 PM EST) and delete this comment -->
+- **Name**: Dev Morker
+- **Dot Number**: morker.1
+- **Due Date**: 12/4 @3pm
 
 ## Assignment Overview
 
@@ -49,8 +49,6 @@ Many of these additional techniques are somewhat out of the scope of this
 course, but just knowing about them could set you up for long term success.
 
 ## Assignment Checklist
-
-<!-- TODO: browse the checklist then delete this comment -->
 
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
@@ -131,8 +129,6 @@ merges, you will need to pull the changes from main into your current branch
 to see them. If you don't like this workflow, you may try following the
 rebase strategies described [here](https://stackoverflow.com/questions/35790561/working-while-waiting-for-pending-pr)
 and [here](https://stackoverflow.com/questions/18021888/continue-working-on-a-git-branch-after-making-a-pull-request).
-
-<!-- TODO: make a new branch from main then delete this comment -->
 
 ## Assignment Tasks
 
@@ -298,18 +294,18 @@ Take some time to fill them out honestly.
 > complete the portfolio project, how much better (or worse) do you think you
 > understand software development and why?
 
-<!-- TODO: discuss -->
+I feel as I still don't fully understand how making a component works as I still do not understand how to create and implement an abstract class, which greatly hindered my ability to complete this project to the best of my ability. I understand the hierarchy with an abstract class conceptually, however when it comes to implementing it I feel as I could use more practice or even just learning how to create one.
 
 > Also, did the portfolio project surface any gaps in your own knowledge of
 > software development. If so, what are those gaps and how did you address them?
 
-<!-- TODO: discuss -->
+The project definitely surfaced gaps in my own knowledge as I forgot to create implementations for the standard methods a few times, which I had to address in the revised parts. Additionally, I realize that the entire concept of creating a component from scratch was very foreign to me, thus I had to double check the hierarchy and examples from the OSU components quite frequently in order to see where I was missing something.
 
 > Finally, as a part of completing the portfolio project, to what extent has
 > your perspective of software development changed, if at all? In other words,
 > is software development something you still enjoy? If not, why not?
 
-<!-- TODO: discuss -->
+My perspective has definitely broadened as most of my experience has been with creating methods and implementing them in a manner which makes sure they work, but this project has opened my eyes to the inticracies of classes that we use for every project such as Map and how much work goes on in the background that we don't even see (or in our case, don't get to see because of OSU hiding the source code). I definitely still enjoy software development, as while I did struggle a lot with this project, I had fun for the most part having the freedom to develop something that I can say was my component which I made without a skeleton.
 
 > One of the challenges of completing the portfolio project is picking up a lot
 > of skills on your own. Some of these skills are, of course, software skills.
@@ -317,29 +313,30 @@ Take some time to fill them out honestly.
 > this process. Therefore, the first question is what skills did you pick up
 > through this process?
 
-<!-- TODO: discuss -->
+A major issue that I came across during this project was things just not working how I expected them to work. I'm not even talking about my coding for the methods, but more broad things such as classes not importing properly and choosing to work with default java components. Thus the main skill I picked up was just researching the various methods the default java components have and mainly researching the various reasons why I had errors on imports and such on websites such as stackoverflow to find solutions and understand why those issues come up as Java is not very helpful with it's error methods.
 
 > The follow-up question is: could you rephrase these skills you picked up
 > as bullet points that you could put on a resume? Try it below.
 
-<!-- TODO: discuss -->
+- ArrayList
+- Components
+- Problem Solving
+- Research
 
 > Next, how has working on this project affected your career trajectory?
 > In other words, do you now hate the topic you picked? Or, are you even more
 > interested in it? Both outcomes are valuable to your personal development.
 
-<!-- TODO: discuss -->
+This project has not really affected my career trajectory, but it has opened my eyes to the work I still need to put in to better understand how code works, especially Java, in order to make quality products. If anything it has made me more interested as it has shown me how much more I have to learn.
 
 > Finally, consider the skills you've picked up and your current career
 > trajectory. What are some things you could do to continue on your
 > career trajectory? Also, who are some mentors you could contact to help
 > you stay on your path?
 
-<!-- TODO: discuss -->
+Some things I could do to continue on my trajectory are learn how to implement abstract classes on my own time so I know how to do so and additonally try my hand at another project similar to this one, albiet maybe one which is simpler with less methods, as to learn how to implement the hierarchy and less on how to code the methods. This project has also given me insperation for an ambitious project/extention for VSCode which would help resolve future issues I had during the project. Speaking on mentors I could contact to help me stay on my career path, my dad is a great choice as he has worked in software development for as long as I can remember, but other choices are various professors I had in my software development journey and other professors I will have in the future alongside other professors which may be looking for students to help out with research opportunities.
 
 ### Changelog
-
-<!-- TODO: update CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
@@ -374,8 +371,6 @@ like to accomplish that, you will need to make GitHub releases after each pull
 request merge (or at least tag your commits). This is not required.
 
 ### Submission
-
-<!-- TODO: read the submission instructions then delete this comment -->
 
 Assuming that your project is in a GitHub repo somewhere and your changes are on
 a proof-of-concept branch, then what we'll want you to do is create a pull
@@ -426,8 +421,6 @@ PDF to read this rubric as a table).
 If you'd like to give feedback for this assignment (or any assignment, really),
 make use of [this survey][survey]. Your feedback helps make assignments
 better for future students.
-
-<!-- TODO: follow the link to share your feedback then delete this comment -->
 
 [markdown-to-pdf-guide]: https://therenegadecoder.com/blog/how-to-convert-markdown-to-a-pdf-3-quick-solutions/
 [survey]: https://forms.gle/dumXHo6A4Enucdkq9

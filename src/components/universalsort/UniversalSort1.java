@@ -1,4 +1,4 @@
-package components.universalSort;
+package components.universalsort;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -12,7 +12,7 @@ public class UniversalSort1 implements UniversalSort {
     /**
      * Concrete representation of the list.
      */
-    private ArrayList<String> list;
+    public ArrayList<String> list;
 
     /**
      * Constructor. Initializes an empty representation.

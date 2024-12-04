@@ -21,4 +21,11 @@ the following form: YYYY.0M.0D.
 
 - Designed abstract class for universalSort component
 
+## YYYY.MM.DD
+
+### Added
+
+- Designed test suite for universalSort component
+- Designed two different use cases for universalSort component
+
 ```
