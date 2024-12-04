@@ -1,4 +1,4 @@
-package components.universalSort;
+package components.universalsort;
 
 import components.standard.Standard;
 
