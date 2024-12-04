@@ -14,4 +14,10 @@ the following form: YYYY.0M.0D.
 - Designed a extendedLogic component
 - Designed a universalSort component
 - Designed a budgetTracker component
+
+## 2024.12.3
+
+## Added
+
+- Designed kernel implementation for universalSort component
 ```
