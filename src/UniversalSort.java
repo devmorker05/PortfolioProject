@@ -1,4 +1,4 @@
-package components.UniversalSort;
+package components.universalSort;
 
 /**
  * {@code universalSortKernel} enhanced with secondary methods.

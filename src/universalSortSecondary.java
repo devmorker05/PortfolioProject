@@ -1,9 +1,12 @@
 package components.universalSort;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 /*
  * Layered implementations of secondary methods for {@code universalSort}
  */
-public abstract class universalSortSecondary implements universalSort {
+public abstract class UniversalSortSecondary implements UniversalSort {
     /*
      * Public members ---------------------------------------------------------
      */
@@ -170,7 +173,7 @@ public abstract class universalSortSecondary implements universalSort {
     @Override
     public void sortSize() {
         for (int i = 0; i < this.length() - 1; i++) {
-            if (indexSize(i) > indexSize(i + 1)) {
+            if (this.indexSize(i) > this.indexSize(i + 1)) {
                 T temp = arr[i];
                 arr[j] = arr[j + 1];
                 arr[j + 1] = temp;
