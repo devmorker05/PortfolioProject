@@ -17,13 +17,15 @@ public interface universalSort extends universalSortKernel {
     /**
      * sorts {@code this} alphabetally, while accounting for case
      *
-     * @param case true if the sort have lowercase values going first, false otherwise
+     * @param whichCase
+     *            true if the sort have lowercase values going first, false
+     *            otherwise
      *
      * @updates this
      *
      * @ensures this = #this
      */
-    void sortCaseSensitive(boolean case);
+    void sortCaseSensitive(boolean whichCase);
 
     /**
      * Sorts {@code this} after the substring {@code subS}

@@ -123,6 +123,16 @@ of it in this folder. You may also embed it just below using markdown syntax
 
 ![universalSort Hierarchy Diagram](.doc/03-component-interfaces/universalSort Component Hierarchy-1.png)
 
+## Hierarchy Diagram and Changes
+
+To address the rubric and improve the design, I refined the interfaces and implementation. I ensured that UniversalSortKernel only contains minimally viable methods for sorting, reversing, and determining the size of elements, while separating the enhanced methods (e.g., sortSize, sortCaseSensitive, and sortSubstring) into the UniversalSort interface. Full Javadoc comments were added to all method headers, including @param, @return, and @ensures tags, meeting documentation and design-by-contract requirements. Additionally, I removed all fields and method implementations from the interfaces, adhering to proper interface design principles. I also included a clear textual hierarchy diagram to show the relationship between Standard, UniversalSortKernel, and UniversalSort. These changes ensure the interfaces are well-structured, align with the rubric, and provide a clear path for extensibility.
+
+Standard
+  |
+UniversalSortKernel
+  |
+UniversalSort
+
 To start making your interfaces, make a branch off of main in your new repo
 called something like `interfaces`. There are many ways to do this, but my
 preference is to use GitHub Desktop. From there, you can click the `Branch`
