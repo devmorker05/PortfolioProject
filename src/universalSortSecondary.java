@@ -1,90 +1,32 @@
 package components.universalSort;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 /*
  * Layered implementations of secondary methods for {@code universalSort}
  */
-public abstract class universalSortSecondary implements universalSort {
-    /*
-     * Public members ---------------------------------------------------------
-     */
+public abstract class UniversalSortSecondary implements UniversalSort {
 
-    /*
-     * Tracks if this is sorted alphabetically
-     *
-     * @updates this
-     *
-     * @ensures {@code this} = true or {@code this} = false
-     */
-    @Override
-    public boolean isSortedAlpha = false;
-
-    /*
-     * Tracks if this is sorted numerically
-     *
-     * @updates this
-     *
-     * @ensures {@code this} = true or {@code this} = false
-     */
-    @Override
-    public boolean isSortedNum = false;
-
-    /*
-     * Tracks if this is reversed
-     *
-     * @updates this
-     *
-     * @ensures {@code this} = true or {@code this} = false
-     */
-    @Override
-    public boolean isReversed = false;
+    public ArrayList<String> list;
 
     /*
      * Common methods (from universalSortKernel)-------------------------------
      */
 
-    /*
-     * Sorts {@code this} alphabetically
-     *
-     * @updates this
-     *
-     * @ensures this = #this
-     */
     @Override
     public void sortAlpha() {
-        if (!this.isSortedAlpha()) {
-            Collections.sort(this);
-            this.isSortedAlpha = true;
-        }
+        Collections.sort(this.list);
     }
 
-    /*
-     * Sorts {@code this} numerically
-     *
-     * @updates this
-     *
-     * @ensures this = #this
-     */
     @Override
     public void sortNums() {
-        if (!this.isSortedNum()) {
-            Collections.sort(this);
-            this.isSortedNum = true;
-        }
+        Collections.sort(this.list);
     }
 
-    /*
-     * Reverses {@code this}
-     *
-     * @updates this
-     *
-     * @ensures this = #this
-     */
     @Override
     public void reverse() {
-        if (!this.isReversed()) {
-            Collections.sort(this);
-            this.isReversed = true;
-        }
+        Collections.reverse(this.list);
     }
 
     /*
@@ -96,11 +38,10 @@ public abstract class universalSortSecondary implements universalSort {
      *
      * @ensure this >= -1
      */
-    @Override
-    public int search(T x) {
+    public int search(String x) {
         int index = -1;
-        if (this.contains(x)) {
-            index = this.indexOf(x);
+        if (this.list.contains(x)) {
+            index = this.list.indexOf(x);
         }
         return index;
     }
@@ -116,44 +57,8 @@ public abstract class universalSortSecondary implements universalSort {
      */
     @Override
     public int indexSize(int i) {
-        String index = this.get(i);
+        String index = this.list.get(i);
         return index.length();
-    }
-
-    /*
-     * Reports the value of isSortedAlpha for {@code this}
-     *
-     * @return true if {@code this} is sorted alphabetically
-     *
-     * @ensures {@code this} = true or {@code this} = false
-     */
-    @Override
-    public boolean isSortedAlpha() {
-        return this.isSortedAlpha;
-    }
-
-    /*
-     * Reports the value of isSortedNum for {@code this}
-     *
-     * @return true if {@code this} is sorted numberically
-     *
-     * @ensures {@code this} = true or {@code this} = false
-     */
-    @Override
-    public boolean isSortedNum() {
-        return this.isSortedNum;
-    }
-
-    /*
-     * Reports the value of isReversed for {@code this}
-     *
-     * @return true if {@code this} is reversed
-     *
-     * @ensures {@code this} = true or {@code this} = false
-     */
-    @Override
-    public boolean isReversed() {
-        return this.isReversed;
     }
 
     /*
@@ -169,13 +74,7 @@ public abstract class universalSortSecondary implements universalSort {
      */
     @Override
     public void sortSize() {
-        for (int i = 0; i < this.length() - 1; i++) {
-            if (indexSize(i) > indexSize(i + 1)) {
-                T temp = arr[i];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = temp;
-            }
-        }
+        this.list.sort((s1, s2) -> Integer.compare(s1.length(), s2.length()));
     }
 
     /*
@@ -190,25 +89,41 @@ public abstract class universalSortSecondary implements universalSort {
      * @ensures this = #this
      */
     @Override
-    public void sortCaseSensitive(boolean case) {
-        ArrayList<T> upperCase = new ArrayList<T>();
-        ArrayList<T> lowerCase = new ArrayList<T>();
-        for (int i = 0; i < this.length(); i++) {
+    public void sortCaseSensitive(boolean whichCase) {
+        ArrayList<String> upperCase = new ArrayList<String>();
+        ArrayList<String> lowerCase = new ArrayList<String>();
+        for (int i = 0; i < this.list.size(); i++) {
             if (Character.isUpperCase(i)) {
-                upperCase.add(i);
+                upperCase.add(this.list.get(i));
             } else {
-                lowerCase.add(i);
+                lowerCase.add(this.list.get(i));
             }
         }
         Collections.sort(upperCase);
         Collections.sort(lowerCase);
-        this.clear();
-        if (case == true) {
-            this.add(upperCase);
-            this.add(lowerCase);
+        this.list.clear();
+        if (whichCase == true) {
+            int i = 0;
+            while (upperCase.size() != 0) {
+                this.list.add(upperCase.get(i));
+                i++;
+            }
+            i = 0;
+            while (lowerCase.size() != 0) {
+                this.list.add(lowerCase.get(i));
+                i++;
+            }
         } else {
-            this.add(lowerCase);
-            this.add(upperCase);
+            int i = 0;
+            while (lowerCase.size() != 0) {
+                this.list.add(lowerCase.get(i));
+                i++;
+            }
+            i = 0;
+            while (upperCase.size() != 0) {
+                this.list.add(upperCase.get(i));
+                i++;
+            }
         }
     }
 
@@ -222,11 +137,12 @@ public abstract class universalSortSecondary implements universalSort {
      * @ensures this = #this
      */
     @Override
-    public sortSubstring(String s) {
-        ArrayList removed = this.remove(s);
-        Collections.sort(removed);
-        this.clear();
-        this.add(s);
-        this.add(removed);
+    public void sortSubstring(String subS) {
+        assert subS != null : "subS must not be null";
+        this.list.sort((s1, s2) -> {
+            boolean contains1 = s1.contains(subS);
+            boolean contains2 = s2.contains(subS);
+            return Boolean.compare(contains2, contains1);
+        });
     }
 }
