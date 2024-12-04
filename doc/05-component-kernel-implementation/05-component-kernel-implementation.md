@@ -1,8 +1,8 @@
 # Portfolio Part 5: Kernel Implementation
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) and delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) and delete this comment -->
-- **Due Date**: <!-- TODO: fill out with due date and time (e.g., 10/17 @ 3:10 PM EST) and delete this comment -->
+- **Name**: Dev Morker
+- **Dot Number**: morker.1
+- **Due Date**: 11/15 @3pm
 
 ## Assignment Overview
 
@@ -39,8 +39,6 @@ of the file. Feel free to reference any of your kernel implementations for
 examples of these.
 
 ## Assignment Checklist
-
-<!-- TODO: browse the checklist then delete this comment -->
 
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
@@ -112,7 +110,9 @@ do good work.
 > discuss how that representation will be restricted (i.e., by convention)
 > and interpreted (i.e., by correspondence).
 
-<!-- TODO: select a representation and explain why -->
+## Justification
+
+For the kernel implementation, I chose ArrayList as the representation for UniversalSort1. This representation is easy to work with because it provides built-in support for sequential data manipulation and allows simple element access, insertion, and replacement. Valid inputs for this representation require that all elements are non-null String values. The sequence is interpreted as a String that can be sorted any way needed by the methods.
 
 > To start making your kernel implementation, make a branch off of main in your
 > new repo called something like `kernel-implementation`. There are many ways to
@@ -133,8 +133,6 @@ do good work.
 > to see them. If you don't like this workflow, you may try following the
 > rebase strategies described [here](https://stackoverflow.com/questions/35790561/working-while-waiting-for-pending-pr)
 > and [here](https://stackoverflow.com/questions/18021888/continue-working-on-a-git-branch-after-making-a-pull-request).
-
-<!-- TODO: make a new branch from main then delete this comment -->
 
 ## Assignment Tasks
 
